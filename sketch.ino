@@ -45,7 +45,7 @@ void setup() {
   float calcR0 = 0;
   for (int i = 1; i <= 10; i++ ) {
     MQ2.update();
-    calcR0 = MQ2.calibrate(RatioMQ2CleanAir);
+    calcR0 += MQ2.calibrate(RatioMQ2CleanAir);
     Serial.print(".");
   }
   MQ2.setR0(calcR0/10);
